@@ -98,7 +98,7 @@ namespace LightestNight.System.Command.MediatRTests
                 requestHandlerDelegateMock.Object);
             
             // Assert
-            result.ShouldBe(response):;
+            result.ShouldBe(response);
         }
     }
 }
