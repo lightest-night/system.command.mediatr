@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>LightestNight.System.Command.MediatR</AssemblyName>
+        <RootNamespace>LightestNight.System.Command.MediatR</RootNamespace>
+        <LangVersion>latest</LangVersion>
+        <IsPackable>true</IsPackable>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>LightestNight.System.Command.MediatR</PackageId>
+        <Authors>James Woodley</Authors>
+        <Company>LightestNight Ltd</Company>
+        <Title>LightestNight :: System :: Command :: MediatR</Title>
+        <Description>Elements focussed on the Command side of the CQRS pattern specialised to the MediatR library</Description>
+        <PackageTags>lightestnight;system;infrastructure;command;cqrs;command query responsibility segregation;mediatr</PackageTags>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <InformationalVersion>1.0.0</InformationalVersion>
+        <PackageIcon>icon.jpeg</PackageIcon>
+        <RepositoryUrl>https://github.com/lightestnight/system.command</RepositoryUrl>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\icon.jpeg">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LightestNight.System.Command" Version="1.0.0" />
+      <PackageReference Include="MediatR" Version="8.0.1" />
+    </ItemGroup>
+</Project>
