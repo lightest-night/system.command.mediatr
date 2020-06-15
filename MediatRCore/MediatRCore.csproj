@@ -41,6 +41,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
       <PackageReference Include="LightestNight.System.Command" Version="1.0.2" />
       <PackageReference Include="MediatR" Version="8.0.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.3" />
