@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Exceptions;
+using LightestNight.System.Domain.Exceptions;
 using MediatR;
 
 namespace LightestNight.System.Command.MediatR
@@ -22,7 +22,7 @@ namespace LightestNight.System.Command.MediatR
             var validationResult = await Task.WhenAll(_validators.Select(validator => validator.Validate(command, cancellationToken)));
             if (!validationResult.Any(error => error.Any()))
                 return await next();
-
+            
             throw new DomainException("An error occurred processing a domain operation",
                 validationResult.SelectMany(error => error).ToArray());
         }
